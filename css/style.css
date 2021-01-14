@@ -58,8 +58,9 @@ p {
 }
 
 .bottom-cloud {
-  position: absolute;
-  left: 300px;
+  position: relative;
+  /* left: 300px; */
+  animation: cloud2 17s linear infinite;
   bottom: 300px;
 }
 
@@ -86,8 +87,9 @@ p {
 .top-cloud {
   position: absolute;
   text-align: right;
-  right: 300px;
+  /* right: 300px; */
   top: 50px;
+  animation: cloud1 20s linear infinite;
 }
 
 .top-container {
@@ -137,4 +139,21 @@ p {
   text-decoration: none;
 }
 
-/* IDs */
+/* Animation */
+@keyframes cloud1 {
+  0% {
+    margin-left: 1000px;
+  }
+  100% {
+    margin-left: -1000px;
+  }
+}
+
+@keyframes cloud2 {
+  0% {
+    right: 1000px;
+  }
+  100% {
+    right: -1000px;
+  }
+}
